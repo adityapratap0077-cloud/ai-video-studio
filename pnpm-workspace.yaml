@@ -1,6 +1,8 @@
 allowBuilds:
   sharp: false
   unrs-resolver: false
+  '@prisma/engines': true
+  prisma: true
 
 overrides:
   better-sqlite3: 13.0.3
