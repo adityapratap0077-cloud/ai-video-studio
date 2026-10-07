@@ -1,0 +1,36 @@
+datasource db {
+  provider = "sqlite"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Project {
+  id        String   @id @default(cuid())
+  name      String
+  idea      String   @default("")
+  settings  String   @default("{}")
+  stage     String   @default("idea")
+  isDemo    Boolean  @default(false)
+  data      String   @default("{}")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ProviderConfig {
+  id            String    @id @default(cuid())
+  providerId    String    @unique
+  displayName   String
+  encryptedKey  String    @default("")
+  keyHint       String    @default("")
+  model         String    @default("")
+  /** Custom endpoint base URL (used by custom-llm; empty = default). */
+  baseUrl       String    @default("")
+  isActive      Boolean   @default(true)
+  lastStatus    String    @default("not_configured")
+  lastTestedAt  DateTime?
+  lastError     String    @default("")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}

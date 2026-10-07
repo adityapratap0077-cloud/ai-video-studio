@@ -1,0 +1,29 @@
+# AI Video Studio — local production run via Docker Compose.
+#
+#   1. cp .env.example .env   # then fill in ENCRYPTION_KEY + provider keys
+#   2. docker compose up --build -d
+#   3. open http://localhost:3000
+#
+# SQLite + generated assets persist in ./data (bind-mounted to /app/data).
+
+services:
+  app:
+    build: .
+    image: ai-video-studio:latest
+    container_name: ai-video-studio
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      # Keep the DB inside the mounted volume regardless of .env.
+      DATABASE_URL: "file:./data/app.db"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3000/api/providers').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
