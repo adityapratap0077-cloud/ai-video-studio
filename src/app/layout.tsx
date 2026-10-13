@@ -18,6 +18,12 @@ export const metadata: Metadata = {
   title: "AI Video Studio",
   description:
     "Bring-your-own-key AI video production studio — from idea to export.",
+  authors: [
+    {
+      name: "Aditya Pratap",
+      url: "https://my-portfolio-khaki-gamma-94.vercel.app/about.html",
+    },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -37,6 +43,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <main id="main" className="flex-1 px-4 py-6 sm:px-6 lg:px-10 lg:py-8">
               <div className="mx-auto w-full max-w-6xl">{children}</div>
             </main>
+            <footer className="px-4 pb-6 pt-2 text-center text-xs text-faint sm:px-6 lg:px-10">
+              Built by{" "}
+              <a
+                href="https://my-portfolio-khaki-gamma-94.vercel.app/about.html"
+                className="text-dim underline underline-offset-2 hover:text-text"
+              >
+                Aditya Pratap
+              </a>
+            </footer>
           </div>
         </div>
       </body>
