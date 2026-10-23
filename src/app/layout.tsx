@@ -16,9 +16,6 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ai-video-studio-eight-beta.vercel.app"),
-  alternates: {
-    canonical: "https://ai-video-studio-eight-beta.vercel.app/",
-  },
   title: "AI Video Studio",
   description:
     "Bring-your-own-key AI video production studio — from idea to export.",
@@ -37,6 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-ink font-sans text-text">
+        <link rel="canonical" href="https://ai-video-studio-eight-beta.vercel.app/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
