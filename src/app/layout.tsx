@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ai-video-studio-eight-beta.vercel.app"),
+  alternates: {
+    canonical: "https://ai-video-studio-eight-beta.vercel.app/",
+  },
   title: "AI Video Studio",
   description:
     "Bring-your-own-key AI video production studio — from idea to export.",
@@ -33,6 +37,34 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-ink font-sans text-text">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  "@id": "https://my-portfolio-khaki-gamma-94.vercel.app/about.html#aditya-pratap",
+                  name: "Aditya Pratap",
+                  url: "https://my-portfolio-khaki-gamma-94.vercel.app/about.html",
+                  sameAs: [
+                    "https://github.com/adityapratap0077-cloud",
+                    "https://www.linkedin.com/in/aditya-pratap-1244a7383/",
+                  ],
+                },
+                {
+                  "@type": "WebSite",
+                  name: "AI Video Studio",
+                  url: "https://ai-video-studio-eight-beta.vercel.app/",
+                  author: {
+                    "@id": "https://my-portfolio-khaki-gamma-94.vercel.app/about.html#aditya-pratap",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
         <a href="#main" className="skip-link">
           Skip to content
         </a>
@@ -44,13 +76,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <div className="mx-auto w-full max-w-6xl">{children}</div>
             </main>
             <footer className="px-4 pb-6 pt-2 text-center text-xs text-faint sm:px-6 lg:px-10">
-              Built by{" "}
               <a
                 href="https://my-portfolio-khaki-gamma-94.vercel.app/about.html"
                 className="text-dim underline underline-offset-2 hover:text-text"
-              >
-                Aditya Pratap
-              </a>
+              >Built by Aditya Pratap</a>
             </footer>
           </div>
         </div>

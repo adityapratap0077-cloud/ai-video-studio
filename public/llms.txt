@@ -1,0 +1,8 @@
+# AI Video Studio
+
+> An open-source bring-your-own-key AI video production studio.
+
+AI Video Studio is an open-source video production studio that works with OpenRouter and OpenAI-compatible LLMs. Users bring their own API key and go from idea to storyboard, assets, timeline, and export in one place.
+It is built for creators and developers who want control over their own models and keys while producing AI videos.
+
+Built by Aditya Pratap: https://my-portfolio-khaki-gamma-94.vercel.app/about.html

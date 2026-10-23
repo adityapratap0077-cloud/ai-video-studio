@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ai-video-studio-eight-beta.vercel.app/</loc>
+  </url>
+  <url>
+    <loc>https://ai-video-studio-eight-beta.vercel.app/projects</loc>
+  </url>
+  <url>
+    <loc>https://ai-video-studio-eight-beta.vercel.app/create</loc>
+  </url>
+  <url>
+    <loc>https://ai-video-studio-eight-beta.vercel.app/storyboard</loc>
+  </url>
+  <url>
+    <loc>https://ai-video-studio-eight-beta.vercel.app/assets</loc>
+  </url>
+  <url>
+    <loc>https://ai-video-studio-eight-beta.vercel.app/timeline</loc>
+  </url>
+  <url>
+    <loc>https://ai-video-studio-eight-beta.vercel.app/exports</loc>
+  </url>
+  <url>
+    <loc>https://ai-video-studio-eight-beta.vercel.app/providers</loc>
+  </url>
+  <url>
+    <loc>https://ai-video-studio-eight-beta.vercel.app/settings</loc>
+  </url>
+</urlset>
