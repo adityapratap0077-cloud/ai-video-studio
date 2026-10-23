@@ -58,6 +58,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-ink font-sans text-text">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HRZ43CRC9"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-4HRZ43CRC9');",
+          }}
+        />
         <link rel="canonical" href="https://aivideostudio-app.vercel.app/" />
         <script
           type="application/ld+json"
