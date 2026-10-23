@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  verification: { google: "WMaTt980gmAuvsMeiWMXL3yta30rhy38zDQ2mxzXgtw" },
   metadataBase: new URL("https://aivideostudio-app.vercel.app"),
   title: "AI Video Studio",
   description:
