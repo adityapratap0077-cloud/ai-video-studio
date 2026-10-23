@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -14,9 +15,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  const pathname = (await headers()).get("x-pathname") ?? "/";
+
+  return {
   verification: { google: "WMaTt980gmAuvsMeiWMXL3yta30rhy38zDQ2mxzXgtw" },
   metadataBase: new URL("https://aivideostudio-app.vercel.app"),
+  alternates: { canonical: pathname },
   title: "AI Video Studio",
   description:
     "Bring-your-own-key AI video production studio — from idea to export.",
@@ -49,7 +54,8 @@ export const metadata: Metadata = {
       "Bring-your-own-key AI video production studio — from idea to export.",
     images: ["/og.png"],
   },
-};
+  };
+}
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -64,7 +70,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-4HRZ43CRC9');",
           }}
         />
-        <link rel="canonical" href="https://aivideostudio-app.vercel.app/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
