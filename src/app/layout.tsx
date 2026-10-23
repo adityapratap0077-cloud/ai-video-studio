@@ -25,6 +25,29 @@ export const metadata: Metadata = {
       url: "https://adityapratapjhansi.vercel.app/about.html",
     },
   ],
+  openGraph: {
+    title: "AI Video Studio",
+    description:
+      "Bring-your-own-key AI video production studio — from idea to export.",
+    url: "https://aivideostudio-app.vercel.app/",
+    siteName: "AI Video Studio",
+    type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "AI Video Studio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Video Studio",
+    description:
+      "Bring-your-own-key AI video production studio — from idea to export.",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -59,6 +82,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                     "@id": "https://adityapratapjhansi.vercel.app/about.html#aditya-pratap",
                   },
                 },
+                {
+                  "@type": "Organization",
+                  name: "AI Video Studio",
+                  url: "https://aivideostudio-app.vercel.app/",
+                  founder: {
+                    "@id": "https://adityapratapjhansi.vercel.app/about.html#aditya-pratap",
+                  },
+                },
               ],
             }),
           }}
@@ -78,6 +109,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 href="https://adityapratapjhansi.vercel.app/about.html"
                 className="text-dim underline underline-offset-2 hover:text-text"
               >Built by Aditya Pratap</a>
+              <span aria-hidden="true" className="mx-2">·</span>
+              <a
+                href="/privacy"
+                className="text-dim underline underline-offset-2 hover:text-text"
+              >Privacy</a>
+              <span aria-hidden="true" className="mx-2">·</span>
+              <a
+                href="https://github.com/adityapratap0077-cloud/ai-video-studio"
+                className="text-dim underline underline-offset-2 hover:text-text"
+              >GitHub</a>
             </footer>
           </div>
         </div>

@@ -21,6 +21,29 @@ function envIsSet(name: string): boolean {
 export default function SettingsPage() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://aivideostudio-app.vercel.app/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Settings",
+                item: "https://aivideostudio-app.vercel.app/settings",
+              },
+            ],
+          }),
+        }}
+      />
       <p className="font-mono text-[11px] uppercase tracking-widest text-faint">
         Configuration
       </p>

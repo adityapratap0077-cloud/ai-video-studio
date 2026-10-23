@@ -27,4 +27,7 @@
   <url>
     <loc>https://aivideostudio-app.vercel.app/settings</loc>
   </url>
+  <url>
+    <loc>https://aivideostudio-app.vercel.app/privacy</loc>
+  </url>
 </urlset>
