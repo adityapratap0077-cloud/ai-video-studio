@@ -1,6 +1,6 @@
 # Contributing to AI Video Studio
 
-Thanks for considering a contribution. This project is built in the open and PRs are welcome — bug fixes, new provider adapters, UI improvements, docs, and tests.
+Thanks for considering a contribution. This project is built in the open and PRs are welcome, bug fixes, new provider adapters, UI improvements, docs, and tests.
 
 ## Setup
 
@@ -19,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000). Demo mode is on by default,
 ## Branch and PR process
 
 1. Fork the repo and create a branch from `main`: `git checkout -b feat/my-change` (or `fix/...`, `docs/...`).
-2. Keep the change focused — one concern per PR.
+2. Keep the change focused: one concern per PR.
 3. Run the checks before pushing:
    ```bash
    pnpm lint
@@ -32,8 +32,8 @@ Open [http://localhost:3000](http://localhost:3000). Demo mode is on by default,
 
 ## Code style
 
-- **TypeScript strict** — no `any` without justification, no unused variables, `tsconfig` strictness stays on.
-- **No keys in code.** Never hardcode API keys, tokens, or secrets — not in source, tests, fixtures, or docs. Tests use the `DemoProvider` mocks; CI runs with `ENCRYPTION_KEY=dummy-for-ci`.
+- **TypeScript strict**: no `any` without justification, no unused variables, `tsconfig` strictness stays on.
+- **No keys in code.** Never hardcode API keys, tokens, or secrets, not in source, tests, fixtures, or docs. Tests use the `DemoProvider` mocks; CI runs with `ENCRYPTION_KEY=dummy-for-ci`.
 - Provider code depends on the interfaces in `src/lib/providers/types.ts`, never on concrete providers. New providers go in as adapters plus a settings-form entry.
 - Follow the existing file layout and naming; prefer small, readable functions over clever ones.
 - Run ESLint and fix all warnings before opening a PR.
@@ -45,7 +45,7 @@ pnpm test        # Vitest, runs the full suite
 pnpm test -- path/to/file.test.ts   # single file
 ```
 
-- New provider adapters ship with unit tests against recorded fixtures (no live API calls in tests — ever).
+- New provider adapters ship with unit tests against recorded fixtures (no live API calls in tests, ever).
 - Pipeline logic (Phase 2+) must have Zod-schema round-trip tests.
 - If you fix a bug, add a regression test that fails without the fix.
 
@@ -55,11 +55,11 @@ Use clear, imperative messages: `feat: add Kling video adapter`, `fix: retry Zod
 
 ## DCO / CLA
 
-No CLA to sign. By opening a pull request you certify the [Developer Certificate of Origin](https://developercertificate.org/) — i.e. you wrote the contribution or have the right to submit it, and you agree it is released under the project's MIT license. (If the project ever needs a formal CLA, it will be announced here; until then, PRs welcome as-is.)
+No CLA to sign. By opening a pull request you certify the [Developer Certificate of Origin](https://developercertificate.org/): i.e. you wrote the contribution or have the right to submit it, and you agree it is released under the project's MIT license. (If the project ever needs a formal CLA, it will be announced here; until then, PRs welcome as-is.)
 
 ## Security-sensitive changes
 
-Changes touching key storage, encryption, or the provider call path get extra review. If you spot a vulnerability, **do not open a public issue** — follow [SECURITY.md](SECURITY.md) instead.
+Changes touching key storage, encryption, or the provider call path get extra review. If you spot a vulnerability, **do not open a public issue**: follow [SECURITY.md](SECURITY.md) instead.
 
 ## Code of Conduct
 
