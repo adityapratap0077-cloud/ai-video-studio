@@ -14,10 +14,10 @@ AI Video Studio is a bring-your-own-key (BYOK) application: users supply their o
 
 If you believe a provider API key was exposed (committed to a repo, pasted in an issue, leaked in logs):
 
-1. **Revoke the key immediately at the provider** (e.g. OpenRouter dashboard → API keys → revoke). This is the step that actually stops misuse — do it first.
+1. **Revoke the key immediately at the provider** (e.g. OpenRouter dashboard → API keys → revoke). This is the step that actually stops misuse, do it first.
 2. Generate a replacement key at the provider.
 3. In AI Video Studio, go to **Settings → Providers**, delete the old entry, and add the new key.
-4. If the leak was in a git commit, rotate the key (step 1) and consider the commit compromised — rewriting history does not un-expose a key that was pushed.
+4. If the leak was in a git commit, rotate the key (step 1) and consider the commit compromised, rewriting history does not un-expose a key that was pushed.
 
 ## Reporting a vulnerability
 
@@ -40,5 +40,5 @@ Security fixes are released as patch versions and noted in the release notes.
 
 ## Scope notes
 
-- This policy covers the AI Video Studio application code. It does **not** cover the security of third-party providers (OpenRouter, Veo, Runway, Kling, etc.) — report provider-side issues to the provider.
+- This policy covers the AI Video Studio application code. It does **not** cover the security of third-party providers (OpenRouter, Veo, Runway, Kling, etc.), report provider-side issues to the provider.
 - Demo mode makes no network calls and stores no keys; it is out of scope for key-handling concerns.
